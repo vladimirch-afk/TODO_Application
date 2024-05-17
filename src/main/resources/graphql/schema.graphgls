@@ -1,0 +1,13 @@
+type TaskEntity {
+    id: ID!
+    title: String!
+    desc: String!
+}
+
+type Mutation {
+    createTask(desc: String!, title: String!) : TaskEntity!
+}
+
+type Query {
+    findAll(): [TaskEntity]!
+}
